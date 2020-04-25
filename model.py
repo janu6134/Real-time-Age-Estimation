@@ -8,9 +8,9 @@ from keras.layers import Conv2D, MaxPool2D, ZeroPadding2D, Dense, Activation, Fl
 from keras.regularizers import l2
 from keras.applications import ResNet50
 from keras.models import Model
-from wide_resnet import WideResNet
+from wide_resnet import buildmodel
 
-def model_choose(model_name="ResNet50", weights=None):
+def model_choose(depth, width, model_name="ResNet50", weights=None):
     if model_name == "ResNet50":
         base = ResNet50(include_top=False, weights='imagenet', input_shape=(224, 224, 3), pooling="avg")
         prediction = Dense(units=101, kernel_initializer="he_normal", use_bias=False, activation="softmax", name="pred_age")(base.output) #he_normal draws samples from normal distribution of weights for intialization of layers
@@ -81,7 +81,7 @@ def model_choose(model_name="ResNet50", weights=None):
 
     else:
         print("Wide ResNet model")
-        WideResNet(64, depth=16, k=8)()
+        return buildmodel(64, depth, width)
 
 
 def main():
