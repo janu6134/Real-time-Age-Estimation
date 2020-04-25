@@ -1,0 +1,2 @@
+The weight files can be downloaded from https://drive.google.com/open?id=1CdmPGVtWD1H0HzHLxBIImHXbzv-uAqLx
+Put the three weight files individually in the project folder. Do not organize them in a single folder, or else path issues will come up.
