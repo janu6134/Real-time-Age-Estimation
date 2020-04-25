@@ -3,5 +3,7 @@ Put the three weight files individually in the project folder. Do not organize t
 
 To execute the demo, run :
 python demo.py --model_name modelname --weight_file weightfile.hdf5 
-In the above command, 'modelname' refers to either AlexNet, ResNet50 or WideResNet. 'weightfile.hdf5' refers to the corresponding weight file downloaded from the google drive link. 
+
+
+In this command, 'modelname' refers to either AlexNet, ResNet50 or WideResNet. 'weightfile.hdf5' refers to the corresponding weight file downloaded from the google drive link. 
 For alexnet, it is alexnet.hdf5; for resnet50 it is resnet50.hdf5 and for wideresnet it is wideresnet.hdf5
