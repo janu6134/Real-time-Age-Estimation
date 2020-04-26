@@ -88,6 +88,5 @@ def main():
     model = model_choose("AlexNet")
     model.summary()
 
-
 if __name__ == '__main__':
     main()
